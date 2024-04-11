@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color:rgb(217, 217, 217);
+    font-family: Impact, sans-serif;
+}
+
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+#search {
+    padding: 8px;
+    margin-right: 10px;
+    width: 15%;
+    border-radius: 10px;
+    border-style: none;
+}
+
+#searchButton {
+    padding: 8px 15px;
+    background-color: rgb(23, 159, 23);
+    color: white;
+    border-color: green;
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+    
+}
+
+#searchButton:hover {
+    background-color: green;
+}
+
+#locateButton {
+    background-color: rgb(255, 84, 84);
+    color: black;
+    border-radius: 20px;
+    border-color: red;
+    border-style: none;
+    cursor: pointer;
+    padding: 6px;
+    padding-bottom: 9px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#locateButton:hover {
+    background-color: red;
+}
+
+#map {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: calc(95vh - 100px);
+    width: 100%;
+    box-shadow: 0 -8px 16px rgb(169, 169, 169); 
+    z-index: 500; 
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    overflow: hidden
+    
+}
+
+.titelbalken {
+    background-color:rgb(54, 54, 54);
+}
+
+img {
+    max-width: 250px; /* Maximale Breite des Bildes */
+    height: auto; /* Automatische Höhe basierend auf der Breite */
+    margin-top: 20px;
+    margin-left: 5px;
+    position:fixed;
+}
+
+/* Media Query für Bildschirmgrößen kleiner als 768px */
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 3.5vw; /* Verringern Sie die Schriftgröße für kleinere Bildschirmgrößen */
+        top: 10px; /* Bleibt oben fixiert */
+        right: auto; /* Positionierung auf der linken Seite aufheben */
+        left: 10px; /* Abstand vom linken Rand */
+    }
+
+    .search-container {
+        padding: 0 10px; /* Abstand zu den Seiten */
+        font-size: 4vw;
+    }
+
+    #search {
+        width: calc(100% - 20px); /* 100% der Bildschirmbreite abzüglich des Abstands von 10px auf beiden Seiten */
+        margin-right: 10px; /* Rechter Abstand */
+        margin-bottom: 10px; /* Unten Abstand */
+    }
+
+    img {
+        max-width: 28%; /* Die Breite des Bildes wird automatisch auf 80% der Bildschirmbreite begrenzt */
+        left: 10px; /* Bleibt oben links fixiert */
+        top: 10px; /* Bleibt oben links fixiert */
+        margin-top: 1%;
+    }
+}
+
+
