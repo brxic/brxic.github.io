@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
 
                 searchmarker = L.marker([lat, lon]).addTo(map);
-                searchmarker.bindPopup("Koordinaten: " + lat + ", " + lon).openPopup();
+                searchmarker.bindPopup("Coordinates: " + lat + ", " + lon).openPopup();
                 map.setView([lat, lon], 13);
             } else {
                 alert('Location not found');
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
 
                 userLocationMarker = L.marker([latitude, longitude]).addTo(map);
-                userLocationMarker.bindPopup("Ihr Standort: " + latitude.toFixed(5) + ", " + longitude.toFixed(5)).openPopup();
+                userLocationMarker.bindPopup("Your Location: " + latitude.toFixed(5) + ", " + longitude.toFixed(5)).openPopup();
 
                 map.setView([latitude, longitude], 13);
             }, function(error) {
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         marker = L.marker([e.latlng.lat, e.latlng.lng]).addTo(map);
-        marker.bindPopup("Koordinaten: " + lat + ", " + lon).openPopup();
+        marker.bindPopup("Coordinates: " + lat + ", " + lon).openPopup();
 
         // Eventlistener für das Schließen des Popups hinzufügen
         marker.on('popupclose', function() {
