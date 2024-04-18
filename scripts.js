@@ -10,10 +10,12 @@ document.addEventListener('DOMContentLoaded', function() {
             maxZoom: 17
         })
     };
-    
-    L.control.layers(baseLayers).addTo(map); // Layer-Kontrollschalter hinzufügen
 
-    baseLayers.OpenStreetMap.addTo(map); // Standard-Layer hinzufügen
+    // Hinzufügen der Basiskarten zum Layer-Kontrollschalter
+    L.control.layers(baseLayers).addTo(map);
+
+    // Standard-Basiskarte hinzufügen
+    baseLayers.OpenStreetMap.addTo(map);
 
     var marker;
 
@@ -105,5 +107,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
 
 
