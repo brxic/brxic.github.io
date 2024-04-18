@@ -1,11 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var map = L.map('map').setView([51.505, -0.09], 13);
+    var map = L.map('map').setView([47.5581077, 7.5878261], 13);
     var userLocationMarker; // Variable für den Standortmarker
     var searchmarker; // Variable für den Suchmarker
+    var baseLayers = {
+        "OpenStreetMap": L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19
+        }),
+        "OpenTopoMap": L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+            maxZoom: 17
+        })
+    };
+    
+    L.control.layers(baseLayers).addTo(map); // Layer-Kontrollschalter hinzufügen
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19
-    }).addTo(map);
+    baseLayers.OpenStreetMap.addTo(map); // Standard-Layer hinzufügen
 
     var marker;
 
@@ -97,4 +105,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
 
