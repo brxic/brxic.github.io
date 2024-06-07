@@ -42,7 +42,7 @@ body {
 .form-container button {
     width: 100%;
     padding: 10px;
-    background-color: #52405c;
+    background-color: rgb(125, 101, 197);
     color: azure;
     border: none;
     border-radius: 5px;
@@ -54,15 +54,35 @@ body {
     background-color: #705874;
 }
 
+.home-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: azure;
+}
+
+.home-button a {
+    text-decoration: none;
+    color: azure;
+    font-size: 20px;
+}
+
+.home-button a i {
+    margin-right: 5px;
+}
+
+
 .additional-options {
     text-align: center;
+    color: azure;
 }
 
 .additional-options a {
-    color: #6c6c6c;
+    color: rgb(125, 101, 197);
     text-decoration: none;
 }
 
 .additional-options a:hover {
     text-decoration: underline;
 }
+

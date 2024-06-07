@@ -23,6 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
         searchLocation();
     });
 
+    document.getElementById('search').addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Verhindert das Standardverhalten des Formulars (falls vorhanden)
+            searchLocation();
+        }
+    });
+
     function searchLocation() {
         var query = document.getElementById('search').value;
 
@@ -107,6 +114,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
-
-

@@ -10,46 +10,69 @@ h1 {
     font-family: Impact, sans-serif;
 }
 
+.navbar {
+    display: grid;
+    grid-template-areas: "logo search login";
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 0.5rem;
+}
+
+.navbar__logo {
+    grid-area: logo;
+    justify-self: start;
+}
+
 .search-container {
-    text-align: center;
+    position: relative;
     margin-bottom: 20px;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    grid-area: search;
+    justify-self: center;
+}
+
+.search-box {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+    background-color: white;
+    text-align: center;
 }
 
 #search {
     padding: 8px;
-    margin-right: 10px;
-    width: 15%;
-    border-radius: 10px;
-    border-style: none;
+    width: 300px;
+    border: none;
+    outline: none;
 }
 
 #searchButton {
-    padding: 8px 15px;
-    background-color: rgb(23, 159, 23);
+    padding: 8px;
+    background-color: rgb(114, 114, 114);
     color: white;
-    border-color: green;
-    border-radius: 10px;
+    border-color: rgb(114, 114, 114);
     border-style: none;
     cursor: pointer;
 }
 
 #searchButton:hover {
-    background-color: green;
+    background-color: rgb(177, 177, 177);
 }
 
 #locateButton {
-    background-color: rgb(255, 84, 84);
-    color: black;
+    position: absolute;
+    bottom: 0;
+    right: -2.5rem;
+    background-color: rgb(107, 141, 246);
     border-radius: 20px;
-    border-color: red;
+    border-color: rgb(114, 114, 114);
     border-style: none;
     cursor: pointer;
-    padding: 6px;
-    padding-bottom: 9px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 6px 10px 9px 10px;
 }
 
 #locateButton:hover {
@@ -76,17 +99,17 @@ h1 {
 img {
     max-width: 250px;
     height: auto;
-    margin-top: 20px;
-    margin-left: 5px;
-    position: fixed;
+}
+
+.profile {
+    grid-area: login;
+    
+    justify-self: end;
+    align-self: center;
 }
 
 .profile img {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 50px;
-    height: auto;
+    height: 50px;
 }
 
 
@@ -105,10 +128,12 @@ img {
         font-size: 4vw;
     }
 
+    .search-box {
+        width: 100%;
+    }
+
     #search {
-        width: calc(100% - 20px);
-        margin-right: 10px;
-        margin-bottom: 10px;
+        width: calc(100% - 40px); /* Anpassung der Breite des Eingabefeldes */
     }
 
     img {
