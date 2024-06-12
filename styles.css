@@ -76,7 +76,7 @@ h1 {
 }
 
 #locateButton:hover {
-    background-color: red;
+    background-color: rgb(3, 115, 252);
 }
 
 #map {
