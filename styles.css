@@ -68,11 +68,13 @@ h1 {
     bottom: 0;
     right: -2.5rem;
     background-color: rgb(107, 141, 246);
-    border-radius: 20px;
+    border-radius: 55px;
     border-color: rgb(114, 114, 114);
     border-style: none;
     cursor: pointer;
-    padding: 6px 10px 9px 10px;
+    padding: 9px 9px 9px 9px;
+    display: grid;
+    place-items: center;
 }
 
 #locateButton:hover {
