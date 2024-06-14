@@ -36,3 +36,4 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         alert('Benutzername oder Passwort ist falsch.');
     }
 });
+

@@ -8,6 +8,7 @@ h1 {
     text-align: center;
     color: rgb(217, 217, 217);
     font-family: Impact, sans-serif;
+    text-wrap: nowrap;
 }
 
 .navbar {
@@ -105,13 +106,13 @@ img {
 
 .profile {
     grid-area: login;
-    
     justify-self: end;
     align-self: center;
 }
 
 .profile img {
-    height: 50px;
+    height: clamp(20px, 10vw, 50px);
+    width: auto;
 }
 
 
@@ -139,9 +140,13 @@ img {
     }
 
     img {
-        max-width: 28%;
+        width: calc(100% - 20px);
         left: 10px;
         top: 10px;
         margin-top: 1%;
+    }
+
+    .locateButton {
+        right: calc(100% -2.5rem);
     }
 }
