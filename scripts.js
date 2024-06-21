@@ -3,11 +3,15 @@ document.addEventListener('DOMContentLoaded', function() {
     var userLocationMarker; // Variable für den Standortmarker
     var searchmarker; // Variable für den Suchmarker
     var baseLayers = {
-        "OpenStreetMap": L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        "Street Map": L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19
         }),
-        "OpenTopoMap": L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-            maxZoom: 17
+        "Topography Map": L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19
+        }),
+        "Dark Mode": L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            maxZoom: 19
         })
     };
 
@@ -15,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     L.control.layers(baseLayers).addTo(map);
 
     // Standard-Basiskarte hinzufügen
-    baseLayers.OpenStreetMap.addTo(map);
+    baseLayers["Street Map"].addTo(map);
 
     var marker;
 
