@@ -4,9 +4,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (registerForm) {
         registerForm.addEventListener('submit', function(event) {
             event.preventDefault();
-            const username = document.getElementById('register-username').value;
-            const password = document.getElementById('register-password').value;
-            const confirmPassword = document.getElementById('confirm-password').value;
+
+            const username = document.querySelector('#registerForm input[name="username"]').value;
+            const password = document.querySelector('#registerForm input[name="password"]').value;
+            const confirmPassword = document.querySelector('#registerForm input[name="confirm-password"]').value;
 
             if (password !== confirmPassword) {
                 alert('Passwörter stimmen nicht überein.');
@@ -27,8 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (loginForm) {
         loginForm.addEventListener('submit', function(event) {
             event.preventDefault();
-            const username = document.getElementById('login-username').value;
-            const password = document.getElementById('login-password').value;
+
+            const username = document.querySelector('#loginForm input[name="username"]').value;
+            const password = document.querySelector('#loginForm input[name="password"]').value;
 
             // Abrufen der gespeicherten Daten
             const storedUsername = localStorage.getItem('username');
