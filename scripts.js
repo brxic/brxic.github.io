@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // Hinzufügen der Basiskarten zum Layer-Kontrollschalter
-    L.control.layers(baseLayers).addTo(map);
+    var layerControl = L.control.layers(baseLayers, null, { position: 'bottomright' }).addTo(map);
 
     // Standard-Basiskarte hinzufügen
     baseLayers["Street Map"].addTo(map);
@@ -117,4 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
             map.removeLayer(searchmarker);
         }
     });
+
+    // Zoom Control nach unten links verschieben
+    map.zoomControl.setPosition('bottomleft');
 });
