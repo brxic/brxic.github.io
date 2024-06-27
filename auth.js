@@ -1,4 +1,3 @@
-// Registrierung
 document.addEventListener('DOMContentLoaded', function() {
     const registerForm = document.getElementById('registerForm');
     if (registerForm) {
