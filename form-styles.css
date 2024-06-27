@@ -59,6 +59,22 @@ h2 a {
     background-color: #705874;
 }
 
+.gender-options {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gender-options label {
+    margin-right: 5px;
+}
+
+.gender-options input[type="radio"] {
+    margin-right: 5px;
+}
+
+
+
 .home-button {
     position: absolute;
     top: 10px;
