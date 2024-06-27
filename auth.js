@@ -1,8 +1,8 @@
 // Registrierung
 document.getElementById('registerForm').addEventListener('submit', function(event) {
     event.preventDefault();
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+    const username = document.getElementById('register-username').value;
+    const password = document.getElementById('register-password').value;
     const confirmPassword = document.getElementById('confirm-password').value;
 
     if (password !== confirmPassword) {
@@ -21,8 +21,8 @@ document.getElementById('registerForm').addEventListener('submit', function(even
 // Login
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault();
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+    const username = document.getElementById('login-username').value;
+    const password = document.getElementById('login-password').value;
 
     // Abrufen der gespeicherten Daten
     const storedUsername = localStorage.getItem('username');
@@ -36,4 +36,3 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         alert('Benutzername oder Passwort ist falsch.');
     }
 });
-
