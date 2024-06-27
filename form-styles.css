@@ -10,6 +10,11 @@ body {
     background-color: #272727;
 }
 
+h2 a {
+    text-decoration: none;
+    color: azure;
+}
+
 .form-container {
     width: 100%;
     max-width: 400px;
