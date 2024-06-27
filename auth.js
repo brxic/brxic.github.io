@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Registrierungsformular
     const registerForm = document.getElementById('registerForm');
     if (registerForm) {
         registerForm.addEventListener('submit', function(event) {
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Login-Formular
     const loginForm = document.getElementById('loginForm');
     if (loginForm) {
         loginForm.addEventListener('submit', function(event) {
