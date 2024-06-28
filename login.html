@@ -13,7 +13,7 @@
     </div>
     <div class="form-container">
         <h2><a href="secret.html">Login</a></h2>
-        <form id="loginForm">
+        <form id="loginForm" method="post"> <!-- Kein PHP, darum kein action -->
             <input type="text" id="login-username" name="username" required placeholder="Username">
             <input type="password" id="login-password" name="password" required placeholder="Password">
             <button type="submit">Login</button>
