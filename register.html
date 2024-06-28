@@ -13,13 +13,15 @@
     </div>
     <div class="form-container">
         <h2>Register</h2>
-        <form id="registerForm" action="" method="post">
+        <form id="registerForm" method="post"> <!-- Kein PHP, darum kein action -->
             <div class="gender-selection">
                 <div class="gender-options">
                     <label for="male">male</label>
                     <input type="radio" id="male" name="gender" value="male" required>
                     <label for="female">female</label>
                     <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="diverse">diverse</label>
+                    <input type="radio" id="diverse" name="gender" value="diverse" required>
                 </div>                
 
             <input type="text" id="register-username" name="username" required placeholder="Username">
