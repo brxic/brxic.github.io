@@ -1,1 +1,1 @@
-![osmapbr.com](https://osmapbr.com)
+[osmapbr.com](https://osmapbr.com)
